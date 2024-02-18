@@ -1,0 +1,1428 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    
+<!-- Mirrored from ethemestudio.com/demo/evalo/evalo-html-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 21:35:52 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Home | Welcome to Secured Global Asssets</title>
+        <meta name="description" content="Secured Asssets, Invest, Crypto, Best investement site, Investment, Bitcoin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="images/logo/asset-icon.png" type="image/x-icon">
+
+        <!-- All css here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/all-animations.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <link href="spop/spop.min.css" rel="stylesheet" type="text/css" /> 
+		<script src="spop/spop.min.js" async></script>
+
+        <style>
+            /* Styles for the slideshow container and images */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .bar-color{
+            color:#ffffff !important;
+        }
+        #toph1{
+            font-size: 40px !important;
+            padding-right: 10px !important;
+            color: #fff;
+            font-weight: 500;
+        }
+        #topspan{
+            font-size: 18px !important;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        #topp{
+            color: #fff;
+        }
+        .slider-height1{
+            width: 100vw !important;
+            /* background-position:center center !important; */
+            background-repeat:no-repeat !important;
+            background-size:cover !important;
+            }
+
+        @media screen and (max-width:768px) {
+            @keyframes rotateBackground {
+                0%{
+                    background-position: 0% 0%;
+                }
+                100%{
+                    background-position: 60% 30%;
+                }
+            }
+            .slider-height1{
+            /* background-position:60% 30% !important; */
+            background-repeat:no-repeat !important;
+            background-size:cover !important;
+            animation: rotateBackground 20s linear infinite;
+
+    
+            }
+            .slider-height1::before{
+            content: '';
+            background: rgba(55, 77, 95, 0.288); /* Adjust the opacity as needed */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            }
+            
+        }
+        </style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  var currentIndex = 0;
+  function fetchData() {
+    $.ajax({
+      url: 'spop.php?index=' + currentIndex,
+      method: 'GET',
+      success: function (data) {
+        if (data) {
+            var parsedData = JSON.parse(data);
+            if(parsedData.country == undefined){
+                currentIndex = 0;
+            }else{
+                // Display data in a popup or alert
+                console.log(parsedData.country); // You can replace this with your popup logic
+                spop({
+                    template  : 'An investor from '+parsedData.country+', '+parsedData.transaction+' $'+parsedData.amount+'...',
+                    style     : 'success',
+                    autoclose : 3000,
+                    position  : 'top-left',
+                    icon      : true
+                    });
+                currentIndex++; // Move to the next row
+            }
+        }
+      },
+      error: function (error) {
+        console.log('Error fetching data: ' + error);
+      }
+    });
+  }
+
+  // Call the function every 2 seconds
+  setInterval(fetchData, 7000);
+})
+</script>
+</Script>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        
+        <!--  ====== preloader=============================================  -->
+
+        <!-- <div id="preloader">
+            <div id="loading">
+                <div id="loading-center">
+                    <div id="loading-center-absolute">
+                        <div class="object" id="object_one"></div>
+                        <div class="object" id="object_two"></div>
+                        <div class="object" id="object_three"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- /preloader -->
+     
+        <!--  ====== header-area-start=======================================  -->
+        <header>
+            <div id="header-sticky" class="transparent-header header-area">
+                <div class="header">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between position-relative">
+                            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5 col-6">
+                                <div class="logo">
+                                    <a href="index.html" id="black" class=""><img src="images/logo/asset-logo.png" alt="Securedglobalasset"></a>
+                                    <a href="index.html" id="white" class=""><img src="images/logo/asset-logo-wh.png" alt="Securedglobalasset"></a>
+                                </div>
+                            </div><!-- /col -->
+                            <div class="col-xl-7 col-lg-7 col-md-1 col-sm-1 col-1 d-none d-lg-flex justify-content-end position-static">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul class="d-block">
+                                            <li class=""><a class="active" href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About</a></li>
+                                            <li><a href="service.html">Service</a></li>
+                                            <li class=""><a href="faq.html">Faq</a></li>
+                                            <li><a href="plans.html">Plans</a></li>
+                                            <li><a href="contact-us.html">Contact</a></li>
+                                         </ul>
+                                    </nav>
+                                </div><!-- /main-menu -->
+                            </div><!-- /col -->
+                            <div class="col-xl-3  col-lg-3 col-md-6 col-sm-6 col-4 pl-lg-0 pl-xl-3">
+                                <div class="header-right d-flex align-items-center justify-content-lg-between justify-content-end">
+                                    <ul class="header-login d-none d-lg-block">
+                                        <li>
+                                            <a class="black-color f-700 black-color" href="account/my_account.php" data-toggle="tooltip" data-selector="true" data-placement="bottom" title="Login / Register">
+                                            Login</a>
+                                        </li>
+                                    </ul>
+                                    <div class="my-btn ml-20 d-none d-sm-block">
+                                        <a href="account/signup.php" class="btn theme-bg text-capitalize">Sign Up</a>
+                                    </div><!-- /my-btn -->
+                                    <div class="d-block d-lg-none pl-20">
+                                        <a class="mobile-menubar theme-color" id="bars" href="javascript:void(0);"><i class="far fa-bars"></i></a>
+                                    </div>
+                                    <!-- <div class="mobile-menu"></div> -->
+                                </div><!-- /header-right -->
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div>
+            </div><!-- /header-bottom -->
+        </header>
+        <!--  header-area-end  -->
+
+
+        <!--  ====== header extra info start================================== -->
+        <!-- side-mobile-menu start -->
+        <div class="side-mobile-menu white-bg pt-10 pb-30 pl-35 pr-30 pb-100">
+            <div class="d-fle justify-content-between w-100">
+                <div class="close-icon d-inline-block float-right clear-both mt-15 mb-10">
+                    <a href="javascript:void(0);"><span class="icon-clear theme-color"><i class="fa fa-times"></i></span></a>
+                </div>
+            </div>
+            <div class="mobile-menu mt-10 w-100"></div>
+            <!-- <ul class="social-link pt-50 clear-both">
+                <li class="d-inline-block">
+                    <a class="facebook-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="twitter-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="google-plus-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="linked-in-color text-center d-inline-block transition-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul> -->
+            
+            <!-- social-link -->
+
+            <!-- mobile phone area -->
+            <div class="mobile-phone-contact phone-contact mt-150 mb-25">
+                <h6 class="f-700 mb-0">Call Us</h6>
+                <a class="theme-color f-700" href="tell:+447984685502">+447984685502</a>
+            </div><!-- /mobile phone area -->
+            
+            <!-- mobile subscribe area -->
+            <div class="mobile-subscribe pb-125">
+                <h6 class="f-700 mb-1">Subscribe to Our Newsletter</h6>
+                <form action="#">
+                    <div class="subscribe-info mt-10 position-relative">
+                        <input class="sub-name form-control border-0 pl-20 pt-15 pb-15 pr-10 primary-bg secondary-color rounded-0" type="email" name="email" id="m-email" placeholder="Submit email">
+                        <span class="secondary-color d-inline-block position-absolute pointer" id="m-send"><i class="far fa-envelope"></i></span>
+                    </div>
+                </form>
+            </div><!-- /mobile subscribe area -->
+
+        </div><!-- /side-mobile-menu -->
+        <div class="body-overlay"></div>
+        <!-- header extra info end  -->
+   
+
+        <main>
+            <!-- ======slider-area-start=========================================== -->
+            <div class="slider-area position-relative over-hidden">
+                <!-- <div id="scene" class="position-absolute w-100 h-100">
+                    <img data-depth="0.20" class="shape shape-1 d-none d-lg-inline-block" src="images/slider/shape/shape1.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-2 d-none d-lg-inline-block" src="images/slider/shape/shape2.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-3 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-4 d-none d-lg-inline-block flash-infinite" src="images/slider/shape/shape4.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-5 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-6 d-none d-lg-inline-block" src="images/slider/shape/shape5.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-7 d-none d-lg-inline-block" src="images/slider/shape/shape6.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-8 d-none d-lg-inline-block" src="images/slider/shape/shape7.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-9 d-none d-lg-inline-block" src="images/slider/shape/shape8.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-10 d-none d-lg-inline-block" src="images/slider/shape/shape9.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-11 d-none d-lg-inline-block" src="images/slider/shape/shape2.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-12 d-none d-lg-inline-block" src="images/slider/shape/shape10.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-13 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-14 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-15 d-none d-lg-inline-block" src="images/slider/shape/shape1.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-16 d-none d-lg-inline-block" src="images/slider/shape/shape11.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-17 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-18 d-none d-lg-inline-block" src="images/slider/shape/shape12.png" alt="#">
+                    <img data-depth="0.20" class="shape shape-19 d-none d-lg-inline-block r-shape" src="images/slider/shape/shape3.png" alt="#">
+                </div> -->
+                <!-- /shape-slider -->
+                <!-- <div class="single-slider slider-height1 container-wrapper d-flex align-items-center z-index1" data-background="images/slider/home1-slider-bg.png"> -->
+                    <div class="single-slider slider-height1 container-wrapper d-flex align-items-center z-index1" data-background="images/slider/slider6.jpg">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12  d-flex align-items-center">
+                                <div class="slider-content mt--20 position-relative" style="margin-top:20px">
+                                    <span class="f-700 theme-color d-block pb-1" data-aos="fade-right" data-aos-duration="2000" id="topspan" data-aos-delay="40">Welcome to the future of finance!</span>
+                                    <h1 class="f-700 pb-22" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="150" id="toph1" style="margin-top: 10px;">Enjoy a secured digital assets investment experience.</h1>
+                                    <p data-aos="fade-right" data-aos-duration="2000" id="topp">Whether you're seeking long-term growth, passive income streams, or strategic short-term gains, we've got you covered.</p>
+                                    <!-- <div class="video-player-btn d-flex align-items-center z-index11 mt-45" >
+                                        <a data-fancybox="" href="https://youtu.be/nqye02H_H6I" class="d-flex align-items-center">
+                                            <div class="video-play-wrap position-relative d-inline-block">
+                                                <div class="video-mark">
+                                                    <div class="wave-pulse wave-pulse-1"></div>
+                                                    <div class="wave-pulse wave-pulse-2"></div>
+                                                </div>
+                                                <div class="video-play position-relative text-center theme-bg d-inline-block white-color">
+                                                    <i class="fas fa-play"></i>
+                                                </div>
+                                            </div>
+                                            <span class="d-inline-block f-700 black-color pl-22">Play Video</span>
+                                        </a>
+                                    </div> -->
+                                    
+                                    <!-- /video-player-btn -->
+                                </div>
+                            </div><!-- /col -->
+
+                            <!-- <div class="col-xl-6 col-lg-6  col-md-6  col-sm-12 col-12  d-flex align-items-center ">
+                                <div class="slider-img1 mt-25 pl-65 z-index1 position-relative" style="margin-top: 20px;">
+                                    <img class="bounce-animate" src="images/slider/slider3.png" alt="image">
+                                    <div class="slider-right-dotted s-dotted position-absolute d-none d-md-block z-index-1">
+                                        <img class="bounce-animate2" src="images/slider/shape/slider-right-dotted.png" alt="image">
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <div class="slider-left-dotted s-dotted position-absolute d-none d-md-block z-index1">
+                        <img class="rotate-animation" src="images/slider/shape/slider-left-dotted.png" alt="image">
+                    </div>
+                </div>
+            </div>
+            <!-- slider-area-end  -->
+
+            <!-- ====== brand-area-start=============================================== -->
+            <div class="brand-area brand-height mt-10 over-hidden" style="margin-top: 0;">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-12">
+                            <div class="row align-items-center justify-content-center" >
+                               <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container" >
+                                    <div class="tradingview-widget-container__widget" ></div>
+                                    <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div> -->
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                                    {
+                                    "symbols": [
+                                    {
+                                    "proName": "FOREXCOM:SPXUSD",
+                                    "title": "S&P 500"
+                                    },
+                                    {
+                                    "proName": "FOREXCOM:NSXUSD",
+                                    "title": "Nasdaq 100"
+                                    },
+                                    {
+                                    "proName": "FX_IDC:EURUSD",
+                                    "title": "EUR/USD"
+                                    },
+                                    {
+                                    "proName": "BITSTAMP:BTCUSD",
+                                    "title": "BTC/USD"
+                                    },
+                                    {
+                                    "proName": "BITSTAMP:ETHUSD",
+                                    "title": "ETH/USD"
+                                    }
+                                    ],
+                                    "showSymbolLogo": true,
+                                    "colorTheme": "light",
+                                    "isTransparent": false,
+                                    "displayMode": "adaptive",
+                                    "locale": "en"
+                                    }
+                                    </script>
+                                    </div>
+                                    <!-- TradingView Widget END -->
+                            </div><!-- /row -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div>
+            <!-- brand-area-end  -->
+
+
+            <!-- ====== about-area-start=========================================== -->
+            <div class="about-area over-hidden mt-75 mb-80">
+                <div class="container">
+                    <div class="row align-items-center  flex-column-reverse flex-lg-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="about-img img-left-margin text-center" data-aos="fade-right" data-aos-duration="2000">
+                                <img class="d-block bounce-animate2" src="images/slider/about2.jpg" alt="image">
+                            </div><!-- /about-img -->
+                        </div><!-- /col -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="about-content mb-50 mt-10" data-aos="fade-left" data-aos-duration="2000"> 
+                                <div class="title">
+                                    <span class="theme-color " style="font-size: 30px; font-weight:700; color:#fea700">Learn more about us</span>
+                                    <h3 class="f-700">We prioritize security, transparency, and innovation</h3>
+                                </div>
+                                <div class="about-text mt-55 ">
+                                    <h6 class="f-400 mb-30">At Secured Global Assets, security is our top priority. We employ state-of-the-art encryption and follow best practices to ensure the safety of your funds and personal information. Your peace of mind is our commitment.</h6>
+                                    <p>Our platform is not just a gateway to digital assets; it's your ticket to a transformative journey through the ever-evolving landscape of blockchain and decentralized finance.</p>
+                                    <div class="my-btn mt-47">
+                                        <a href="account/my_account.php" class="btn theme-bg text-capitalize f-18 f-700">Get Started</a>
+                                    </div><!-- /my-btn -->
+                                </div>
+                            </div><!-- /about-content -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div>
+            <!-- about-area-end -->
+
+            <!-- ====== service-area-start ==================================== -->
+            <div class="service-area over-hidden">
+                <div class="container">
+                   
+                            <!-- <span class="theme-color " style="font-size: 35px; text-align:center; padding:10px">Your most reliable platform</span> -->
+                            <h3 class="f-700" style="padding: 10px; text-align:center">Your most reliable platform</h3>
+                   
+                    <div class="row">
+                        <div class="col-xl-4  col-lg-4  col-md-4  col-sm-12 col-12">
+                            <div class="single-service-content transition5 mt-10 secondary-border01 pl-50 pt-55 pb-35 pr-50 mb-35 mt-30 tilt" data-aos="fade-up">
+                                <div class="ser-icon d-inline-block text-center mb-20 transition5">
+                                    <img src="images/icon/222-verified.png" alt="image">
+                                </div><!-- /ser-icon -->
+                                <div class="service-text">
+                                    <h6 class="f-700 mb-22">Two Factor Auth</h6>
+                                    <p>Two-factor authentication (2FA) by default on all securedglobalasset accounts, to securely protect you from unauthorised access and impersonation.</p>
+                                </div>
+                            </div><!-- /single-service-content -->
+                        </div><!-- /col -->
+                        <div class="col-xl-4  col-lg-4  col-md-4  col-sm-12 col-12">
+                            <div class="single-service-content transition5 mt-10 secondary-border01 pl-50 pt-55 pb-35 pr-50 mb-35 mt-30 tilt" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                                <div class="ser-icon d-inline-block text-center mb-20  transition5">
+                                    <img src="images/icon/169-shield.png" alt="image">
+                                </div><!-- /ser-icon -->
+                                <div class="service-text">
+                                    <h6 class="f-700 mb-22">Secure storage</h6>
+                                    <p>We offer you a platform to easily store and grow your digital currencies (BTC, XLM, XRP, ETH) and other digital cryptocurrencies</p>
+                                </div>
+                            </div><!-- /single-service-content -->
+                        </div><!-- /col -->
+                        <div class="col-xl-4  col-lg-4  col-md-4  col-sm-12 col-12">
+                            <div class="single-service-content transition5 mt-10 secondary-border01 pl-50 pt-55 pb-35 pr-50 mb-35 mt-30 tilt" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                                <div class="ser-icon d-inline-block text-center mb-20  transition5">
+                                    <img src="images/icon/gear-1.png" alt="image">
+                                </div><!-- /ser-icon -->
+                                <div class="service-text">
+                                    <h6 class="f-700 mb-22">Protected by insurance</h6>
+                                    <p>Be rest assured that your investments are shielded, we provide an extra layer of financial security for unforeseen circumstances.</p>
+                                </div>
+                            </div><!-- /single-service-content -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div>
+            <!-- service-area-end  -->
+
+            <!-- ====== feature-area-start=========================================== -->
+            <div class="feature-area mt-60 over-hidden">
+                <div class="feature-bg bg-no-repeat" data-aos="fade-up" data-aos-duration="1800" data-background="images/feature/home1-feature-bg.png">
+                    <div class="container">
+                        <div class="row align-items-center mt-10 flex-column-reverse flex-lg-row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pr-10">
+                                <div class="feature-img img-left-margin mt-35 text-center" data-aos="fade-right" data-aos-duration="2000">
+                                    <img class="d-block bounce-animate2" src="images/slider/about3.jpg" alt="image">
+                                </div><!-- /feature-img -->
+                            </div><!-- /col -->
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pl-lg-0 pl-xl-3">
+                                <div class="feature-content mb-10" data-aos="fade-left" data-aos-duration="2000">
+                                    <div class="title">
+                                        <span class="theme-color f-700" style="color:#fea700">Why Choose Us</span>
+                                        <h3 class="f-700 pb-30">We are the best</h3>
+                                        <p>At Securedglobalasset, we envision a future where everyone can participate in the cryptocurrency revolution with confidence.</p>
+                                    </div>
+                                    <div class="feature-text mt-30">
+                                        <div class="row">
+                                            <div class="col-xl-6  col-lg-6 col-md-6  col-sm-6 col-12">
+                                                <div class="single-feature-service mb-22">
+                                                    <div class="feature-ser-heading d-flex align-items-center mb-1">
+                                                        <div class="feature-ser-icon d-inline-block text-center mr-30">
+                                                            <span class="theme-color d-block">
+                                                                <!-- <span class="flat-family flat-family flaticon-012-edit"> -->
+                                                                    <span class="">
+                                                                    <img src="images/icon/3.png" alt="" width="30" height="30"></span>
+                                                            </span>
+                                                        </div><!-- /ser-icon -->
+                                                        <h6 class="f-700 mb-0">Global Market</h6>
+                                                    </div><!-- /feature-ser-heading -->
+                                                    <p>Securedglobalasset allows its users to access flexible investment options from a single account.</p>
+                                                </div><!-- /single-feature-service -->
+                                            </div><!-- /col -->
+                                            <div class="col-xl-6  col-lg-6 col-md-6  col-sm-6 col-12">
+                                                <div class="single-feature-service mb-22">
+                                                    <div class="feature-ser-heading d-flex align-items-center mb-1">
+                                                        <div class="feature-ser-icon d-inline-block text-center mr-30">
+                                                            <span class="theme-color d-block">
+                                                                <span class=""><img src="images/icon/1.png" alt="" width="30" height="30"></span>
+                                                            </span>
+                                                        </div><!-- /ser-icon -->
+                                                        <h6 class="f-700 mb-0">Our Solution</h6>
+                                                    </div><!-- /feature-ser-heading -->
+                                                    <p>Become a better investor with our platform. We provides a platform that is used by investors from around the world.</p>
+                                                </div><!-- /single-feature-service -->
+                                            </div><!-- /col -->
+                                            <div class="col-xl-6  col-lg-6 col-md-6  col-sm-6 col-12">
+                                                <div class="single-feature-service mb-22">
+                                                    <div class="feature-ser-heading d-flex align-items-center mb-1">
+                                                        <div class="feature-ser-icon d-inline-block text-center mr-30">
+                                                            <span class="theme-color d-block">
+                                                                <span class=""><img src="images/icon/6.png" alt="" width="30" height="30"></span>
+                                                            </span>
+                                                        </div><!-- /ser-icon -->
+                                                        <h6 class="f-700 mb-0">Insurance Policy</h6>
+                                                    </div><!-- /feature-ser-heading -->
+                                                    <p>Our insurance policy provides coverage for any losses that may occur due to unauthorized access, theft, or hacking of our platform.</p>
+                                                </div><!-- /single-feature-service -->
+                                            </div><!-- /col -->
+                                            <div class="col-xl-6  col-lg-6 col-md-6  col-sm-6 col-12">
+                                                <div class="single-feature-service mb-22">
+                                                    <div class="feature-ser-heading d-flex align-items-center mb-1">
+                                                        <div class="feature-ser-icon d-inline-block text-center mr-30">
+                                                            <span class="theme-color d-block">
+                                                                <span class=""><img src="images/icon/5.png" alt="" width="30" height="30"></span>
+                                                            </span>
+                                                        </div><!-- /ser-icon -->
+                                                        <h6 class="f-700 mb-0">Award winning</h6>
+                                                    </div><!-- /feature-ser-heading -->
+                                                    <p>At Securedglobalasset, we are committed to maintaining our award-winning standards and providing you with the highest level of service and support. </p>
+                                                </div><!-- /single-feature-service -->
+                                            </div><!-- /col -->
+                                        </div><!-- /row -->
+                                    </div>
+                                </div><!-- /feature-content -->
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div>
+            </div>
+            <!-- feature-area-end -->
+
+            <!-- ====== sp-feature-area-start================================================= -->
+            <div class="sp-feature-area over-hidden mt--50">
+                <div class="sp-feature-bg feature-bg bg-no-repeat pt-220 pb-95" data-aos="fade-up" data-aos-duration="1800" data-background="images/feature/home1-sp-feature-bg.png">
+                    <div class="container">
+                        <div class="row align-items-center mt-10">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="sp-feature-content pr-xl-2 mb-10 mt-45" data-aos="fade-right" data-aos-duration="2000">
+                                    <div class="title">
+                                        <span class="theme-color f-700" style="color: #fea700;">Explore Our Services</span>
+                                        <h3 class="f-700 pb-30">Get access to new investment possibilities.</h3>
+                                        <p>It’s our mission to provide you with a delightful and a successful experience! </p>
+                                    </div><!-- /title -->
+                                    <ul class="sp-feature-text mt-30">
+                                        <li class="d-flex">
+                                            <span class="sp-feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
+                                            <p>Securedglobalasset implement intelligent algorithms and data analytics to help users make informed investment decisions.</p>
+                                        </li>
+                                        <li class="d-flex">
+                                            <span class="sp-feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
+                                            <p>We excels in optimizing your investments through meticulous asset management, ensuring maximum returns and risk mitigation.</p>
+                                        </li>
+                                        <li class="d-flex">
+                                            <span class="sp-feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
+                                            <p>Our platform offer a seamless and intuitive interface that caters to both novice and experienced investors</p>
+                                        </li>
+                                    </ul>
+                                    <div class="my-btn pt-32">
+                                        <a href="account/signup.php" class="btn theme-bg text-capitalize">Register</a>
+                                    </div><!-- /my-btn -->
+                                </div><!-- /feature-content -->
+                            </div><!-- /col -->  
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="feature-img img-right-margin mt-35 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="2000">
+                                    <img class="d-block ml-lg-auto bounce-animate2" src="images/slider/about4.jpg" alt="image">
+                                </div><!-- /feature-img -->
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div>
+            </div>
+            <!-- sp-feature-area-end -->
+
+            <!-- ====== facts-area-start=========================================== -->
+            <!-- <div class="facts-area pb-200">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-9  col-lg-10  col-md-11  col-sm-12 col-12">
+                            <div class="title text-center">
+                                <span class="theme-color f-700">Securedglobalasset.com</span>
+                                <h3 class="f-700 pb-30">Numbers Never Tell A Lie</h3>
+                                <p>We are aimed at getting the leading position in the investment market. Our experts monitor online each stock exchange daily and due to favourable exchange rate we maximize our investors’ profit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12  col-lg-  col-md-  col-sm- col-">
+                            <ul class="facts-wrapper mt-75">
+                                <li class="d-inline-block facts1">
+                                    <div class="single-facts  white-bg text-center pt-46 pb-50 mb-30">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="per d-inline-block f-700" style="font-size:20px;">$</span>
+                                            <span class="f-700 d-inline-block counter" style="font-size:20px;">33611695.67</span>
+                                            
+                                        </div>
+                                        <p class="black-color text-center f-700 mb-0 mt-1">Invested</p>
+                                    </div>    
+                                </li>
+                                <li class="d-inline-block facts2 theme-bg-fact single-facts-margin-left position-relative">
+                                    <div class="single-facts  theme-bg text-center pt-46 pb-50 mb-30">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="white-color d-inline-block f-700" style="font-size:20px;">$</span>
+                                            <span class="white-color f-700 d-inline-block counter" style="font-size:20px;">16153104.53</span>
+                                            
+                                        </div>
+                                        <p class="white-color text-center f-700 mb-0 mt-1">Withdrawn</p>
+                                    </div>    
+                                </li>
+                                <li class="d-inline-block facts3 single-facts-margin-left  position-relative">
+                                    <div class="single-facts  white-bg text-center pt-46 pb-50 mb-30">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="d-inline-block f-700" style="font-size:20px;">$</span>
+                                            <span class="f-700 d-inline-block counter" style="font-size:20px;">102646833</span>
+                                            
+                                        </div>
+                                        <p class="black-color text-center f-700 mb-0 mt-1">Deposit</p>
+                                    </div>    
+                                </li>
+                                <li class="d-inline-block facts4 theme-bg-fact single-facts-margin-left position-relative">
+                                    <div class="single-facts  theme-bg text-center pt-46 pb-50 mb-30">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="white-color f-700 d-inline-block counter" style="font-size:20px;">238331</span>
+                                            <span class="white-color d-inline-block f-700" style="font-size:20px;">+</span>
+                                        </div>
+                                        <p class="white-color text-center f-700 mb-0 mt-1">Total account</p>
+                                    </div>    
+                                </li>
+                                <li class="d-inline-block facts5 single-facts-margin-left position-relative clear-both">
+                                    <div class="single-facts  white-bg text-center pt-46 pb-50 mb-30">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="f-700 d-inline-block counter" style="font-size:20px;">114668</span>
+                                            <span class="per d-inline-block f-700" style="font-size:20px;">+</span>
+                                        </div>
+                                        <p class="black-color text-center f-700 mb-0 mt-1">Active user</p>
+                                    </div>    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- facts-area-end -->
+
+            <!-- ====== screenshot-area-start================================================== -->
+            <div class="screenshot-area primary-bg mb-200 mt-30 pt-155">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-9  col-lg-10 col-md-11  col-sm-12 col-12">
+                            <div class="title text-center">
+                                <!-- <span class="theme-color f-700" style="color: #fea700;">Screenshots</span> -->
+                                <h3 class="f-700 pb-30">Choose a Plan</h3>
+                                <p>Our proprietary platform enables you to invest your asset anytime, anywhere, so you can take action right now. </p>
+                            </div><!-- /title -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                  
+                            <div class="row service-wrapper mt-60 justify-content-center">
+                                <div class="col-xl-4  col-lg-4  col-md-4  col-sm-10 col-12">
+                                    <div class="single-service-content transition3 mt-10 secondary-border01 pl-50 pt-85 pb-80 pr-50 mb-30 text-center">
+                                        <div class="ser-icon d-inline-block text-center mb-35 transition5">
+                                            <img src="images/icon/industry.png" alt="image">
+                                        </div><!-- /ser-icon -->
+                                        <div class="service-text text-center">
+                                            <h5 class="f-700 mb-25">Silver </h5>
+                                            <p>5% daily for 7 working days</p>
+                                            
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Minimum:</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Maximum:</li>
+                                            </ul>
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$200</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$5,000</li>
+                                            </ul>
+
+                                            <ul class="service-list d-inline-block mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">
+                                                    <a href="account/my_account.php" style="color:#fff; margin-top: 25px;" class="btn theme-bg text-capitalize">Invest</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4  col-lg-4  col-md-4  col-sm-10 col-12">
+                                    <div class="single-service-content transition3 mt-10 secondary-border01 pl-50 pt-85 pb-80 pr-50 mb-30 text-center">
+                                        <div class="ser-icon d-inline-block text-center mb-35 transition5">
+                                            <img src="images/icon/industry.png" alt="image">
+                                        </div><!-- /ser-icon -->
+                                        <div class="service-text text-center">
+                                            <h5 class="f-700 mb-25">Gold </h5>
+                                            <p>5.6% daily for 10 working days</p>
+                                            
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Minimum:</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Maximum:</li>
+                                            </ul>
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$5,000</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$19,999</li>
+                                            </ul>
+
+                                            <ul class="service-list d-inline-block mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">
+                                                    <a href="account/my_account.php" style="color:#fff; margin-top: 25px;" class="btn theme-bg text-capitalize">Invest</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4  col-lg-4  col-md-4  col-sm-10 col-12">
+                                    <div class="single-service-content transition3 mt-10 secondary-border01 pl-50 pt-85 pb-80 pr-50 mb-30 text-center">
+                                        <div class="ser-icon d-inline-block text-center mb-35 transition5">
+                                            <img src="images/icon/industry.png" alt="image">
+                                        </div><!-- /ser-icon -->
+                                        <div class="service-text text-center">
+                                            <h5 class="f-700 mb-25">Diamond </h5>
+                                            <p>7.5% daily for 15 working days</p>
+                                            
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Minimum:</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Maximum:</li>
+                                            </ul>
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$25,000</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$49,999</li>
+                                            </ul>
+
+                                            <ul class="service-list d-inline-block mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">
+                                                    <a href="account/my_account.php" style="color:#fff; margin-top: 25px;" class="btn theme-bg text-capitalize">Invest</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4  col-lg-4  col-md-4  col-sm-10 col-12">
+                                    <div class="single-service-content transition3 mt-10 secondary-border01 pl-50 pt-85 pb-80 pr-50 mb-30 text-center">
+                                        <div class="ser-icon d-inline-block text-center mb-35 transition5">
+                                            <img src="images/icon/industry.png" alt="image">
+                                        </div><!-- /ser-icon -->
+                                        <div class="service-text text-center">
+                                            <h5 class="f-700 mb-25">Platinum </h5>
+                                            <p>8% daily for 20 working days</p>
+                                            
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Minimum:</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">Maximum:</li>
+                                            </ul>
+                                            <ul class="service-list d-flex justify-content-between mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$50,000</li>
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">$100,000</li>
+                                            </ul>
+
+                                            <ul class="service-list d-inline-block mt-1">
+                                                <li class="black-color f-700  d-flex justify-content-start align-items-center">
+                                                    <a href="account/my_account.php" style="color:#fff; margin-top: 25px;" class="btn theme-bg text-capitalize">Invest</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>        
+                </div><!-- /container -->
+            </div>
+            <!-- screenshot-area-end -->
+
+            <!-- ====== faq-area-start============================================ -->
+            <div class="faq-area pt-130 mb-70 over-hidden">
+                <div class="container">
+                    <div class="row mt-10">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="faq-content mt-30 mb-50" data-aos="fade-right" data-aos-duration="2000">
+                                <div class="title">
+                                    <span class="theme-color f-700" style="color: #fea700;">What people want to know</span>
+                                    <h3 class="f-700 pb-30">Frequently Asked Questions</h3>
+                                    <p>We prioritize transparency and encourage you stay informed about market conditions. Our team is here to support you on your journey.</p>
+                                </div>
+                                <div class="faq-wrapper mt-40">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card border-0">
+                                            <div class="card-header card-header-top rounded-0 bg-transparent p-0" id="headingOne">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        How do I open my securedglobalasset.com account?
+                                                    </a>
+                                                </h6>
+                                            </div><!-- /card-header -->
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">It's quite easy and convenient. Follow this <a href="signup.php">link</a>, fill in the registration form and then click "Register". </p>
+                                                </div>
+                                            </div><!-- /collapseOne -->
+                                        </div><!-- /card1 -->
+        
+                                        <div class="card border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingTwo">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        How do I make an investment?
+                                                    </a>
+                                                </h6>
+                                            </div><!-- /card-header -->
+        
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">To make a investment you must first become a member. Once you are signed up, you can make your first deposit. All deposits must be made through the members area. You can login using the member username and password you receive when signup. Select investment option and choose a plan. </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card2 -->
+        
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingThree">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        How do i make a deposit?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">You can open a free cryptocurrency account by downloading any of the cryptocurrency apps and creating an account with them. Copy the crytocurrency address provided on our membership area and transfer the ammount you wish to deposit.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingFour">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                        How long does it take for my deposit to be added to my account?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">Your account will be updated as fast, as you deposit.  </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingFive">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        How do you calculate the interest on my account?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">Depending on each plan. Interest on your securedglobalasset.com account is acquired at the end of each plan duration and credited to your available balance.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingSix">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        After I make a withdrawal request, when will the funds be available on my cryptocurrency account?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">Funds are usually available within 5 minutes after request is made. </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingSeven">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                        Can I lose money?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">It's important to note that, while we have a team of expert analysts who diligently study market trends and conduct thorough analyses to guide our investment decisions, all investments inherently carry a level of risk. Our commitment is to help you make well-informed investment using the most accurate and informed insights provided by our expert. It's very important for you to know that we are real traders and that we invest members' funds on major investments. </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                        <div class="card card-header-end border-0">
+                                            <div class="card-header bg-transparent p-0" id="headingEight">
+                                                <h6 class="mb-0">
+                                                    <a href="#" class="btn btn-link black-color f-700 border-0 d-block text-left rounded-0 position-relative collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                        Who manages the funds?
+                                                    </a>
+                                                </h6>
+                                            </div>
+        
+                                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="m-0">These funds are managed by a team of securedglobalasset.com investment experts. </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /card -->
+                                    </div><!-- /accordion -->
+                                </div><!-- /faq-wrapper -->
+                            </div><!-- /faq-content -->
+                        </div><!-- /col -->
+                        <div class="col-xl-6 col-lg-6 offset-lg-0 col-md-10 offset-md-1 col-sm-12 col-12 pr-10">
+                            <div class="faq-img img-right-margin text-center"  data-aos="fade-left" data-aos-duration="2000">
+                                <img class="d-block bounce-animate2" src="images/slider/about5.jpg" alt="image">
+                            </div><!-- /faq-img -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div>
+            <!-- faq-area-end -->
+
+            <!-- ====== work-area-start ==================================== -->
+            <!-- <div class="work-area over-hidden">
+                <div class="work-bg bg-no-repeat bg-cover pt-200" data-background="images/bg/home1-process-bg.png">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-xl-9  col-lg-10  col-md-11  col-sm-12 col-12">
+                                <div class="title text-center mt-15">
+                                    <span class="theme-color f-700" style="color: #fea700;">Process</span>
+                                    <h3 class="f-700 pb-30">How It Works</h3>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-wrapper pt-105 pb-85">
+                            <div class="row">
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12">
+                                    <div class="single-work-content position-relative transition5 white-bg mb-80" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="10">
+                                        <div class="item-tag-wrapper rounded-circle text-center transition5">
+                                            <div class="item-tag theme-bg d-inline-block text-center rounded-circle position-relative z-index11">
+                                                <span class="text-white f-700">01</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-lg-flex">
+                                            <div class="work-icon d-inline-block text-center mr-30">
+                                                <span class="d-inline-block">
+                                                    <img src="images/icon/user.png" alt="image">
+                                                </span>
+                                            </div>
+                                            <div class="work-text">
+                                                <h5 class="f-700 mb-22">Open an account</h5>
+                                                <p class="m-0">To open an account, simply click on the “Sign Up” button on the this page. The next page is the registration form that you need to fill out. </p> 
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12">
+                                    <div class="single-work-content position-relative white-bg mb-80" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
+                                        <div class="item-tag-wrapper rounded-circle text-center transition3">
+                                            <div class="item-tag theme-bg d-inline-block text-center rounded-circle position-relative z-index11">
+                                                <span class="text-white f-700">02</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-lg-flex">
+                                            <div class="work-icon d-inline-block text-center mr-30">
+                                                <span class="d-inline-block">
+                                                    <img src="images/icon/bar.png" alt="image">
+                                                </span>
+                                            </div>
+                                            <div class="work-text">
+                                                <h5 class="f-700 mb-22">Deposit & Invest</h5>
+                                                <p class="m-0">To start growing your investement you need to make a deposit. You can do this from the deposit section of your account. Now you can select a plan and invest. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12">
+                                    <div class="single-work-content position-relative white-bg mb-80" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="10">
+                                        <div class="item-tag-wrapper rounded-circle text-center transition3">
+                                            <div class="item-tag theme-bg d-inline-block text-center rounded-circle position-relative z-index11">
+                                                <span class="text-white f-700">03</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-lg-flex">
+                                            <div class="work-icon d-inline-block text-center mr-30">
+                                                <span class="d-inline-block">
+                                                    <img src="images/icon/shopping-cart-1.png" alt="image">
+                                                </span>
+                                            </div>
+                                            <div class="work-text">
+                                                <h5 class="f-700 mb-22">Watch your investment grow</h5>
+                                                <p class="m-0">After you have made an investment, there is nothing else to do except watch your earnings grow in your account within the investement duration.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12">
+                                    <div class="single-work-content  position-relative white-bg mb-80" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
+                                        <div class="item-tag-wrapper rounded-circle text-center transition3">
+                                            <div class="item-tag theme-bg d-inline-block text-center rounded-circle position-relative z-index11">
+                                                <span class="text-white f-700">04</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-lg-flex">
+                                            <div class="work-icon d-inline-block text-center mr-30">
+                                                <span class="d-inline-block">
+                                                    <img src="images/icon/briefcase.png" alt="image">
+                                                </span>
+                                            </div>
+                                            <div class="work-text">
+                                                <h5 class="f-700 mb-22">Transfer Earnings back to Wallet</h5>
+                                                <p class="m-0">It only takes a few seconds to initiate your withdrawals and have your earnings paid to you. Withdrawals are paid to the cryptocurrency address provided during withdrawal.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- work-area-end  -->
+
+            <!-- ====== testimonial-area-start ==================================== -->
+            <div class="testimonial-area mt-130 mb-20 over-hidden">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8  col-lg-10  col-md-11  col-sm-12 col-12">
+                            <div class="title text-center mt-20">
+                                <span class="theme-color f-700" style="color: #fea700;">Testimonial</span>
+                                <h3 class="f-700 pb-30">What People Say</h3>
+                                <p class="mb-1">We’re proud to be an asset management company whose culture is driven by strong values and a long-term vision.</p>
+                            </div><!-- /title -->
+                        </div><!-- /col -->
+                    </div><!-- /row -->
+                    <div class="testimonial-wrapper1 mt-60">
+                        <div class="row align-items-center justify-content-center">
+                            <!-- <div class="col-xl-4  col-lg-5 col-md-8 col-sm-8 col-10">
+                                <div class="testimonial-img">
+                                    <img  data-aos="zoom-in" data-aos-duration="2000" src="images/slider/slider2.png" alt="image">
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-xl-7 offset-xl-1  col-lg-7 col-md-12  col-sm-12 col-12"> -->
+                                <div class="col-xl-12  col-lg-12 col-md-12  col-sm-12 col-12">
+                                <div class="testimonial-content position-relative mt-1" data-aos="fade-left" data-aos-duration="2000">
+                                    <div class="quit d-inline-block position-absolute left-0 z-index11">
+                                        <span class="black-color d-inline-block"><i class="fas fa-quote-left"></i></span>
+                                    </div>
+
+                                    <div class="slideshow-container">
+                                        <!-- Slides -->
+                                            <div class="mySlides">
+                                                <div class="testimonial-tex pb-25">
+                                                    <p class="font-italic secondary-color3">I love how intuitive and user-friendly the platform is! It makes navigating through investment options seamless</p>
+                                                    <div class="testi-info d-flex mt-50">
+                                                        <div class="testi-avatar mr-20 rounded-circle">
+                                                            <img class="rounded-circle" src="images/slider/testi4.jpg" width="70" height="70" alt="image">
+                                                        </div><!-- /testi-avatar -->
+                                                        <div class="avatar-info">
+                                                            <h6 class="f-700">Alice Smith</h6>
+                                                            <p class="">Trader</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /testimonial-text -->
+                                            </div>
+                            
+                                            <div class="mySlides">
+                                                <div class="testimonial-tex pb-25">
+                                                    <p class="font-italic secondary-color3">The platform offers a wide range of investment opportunities. This diversity allows me to tailor my portfolio to match my financial goals and risk tolerance.</p>
+                                                    <div class="testi-info d-flex mt-50">
+                                                        <div class="testi-avatar mr-20 rounded-circle">
+                                                            <img class="rounded-circle" src="images/slider/testi2.png"  width="70" height="70" alt="image">
+                                                        </div><!-- /testi-avatar -->
+                                                        <div class="avatar-info">
+                                                            <h6 class="f-700">Mathew Zod</h6>
+                                                            <p class="">Investor</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /testimonial-text -->
+                                            </div>
+                            
+                                            <div class="mySlides">
+                                                <div class="testimonial-tex pb-25">
+                                                    <p class="font-italic secondary-color3">The customer support team is incredibly responsive and helpful. Whether I have a question about a specific investment or need assistance with the platform, they are always there to provide timely and knowledgeable support.</p>
+                                                    <div class="testi-info d-flex mt-50">
+                                                        <div class="testi-avatar mr-20 rounded-circle">
+                                                            <img class="rounded-circle" src="images/slider/testi3.png"  width="70" height="70" alt="image">
+                                                        </div><!-- /testi-avatar -->
+                                                        <div class="avatar-info">
+                                                            <h6 class="f-700">Jane Lopez</h6>
+                                                            <p class="">Trader</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /testimonial-text -->
+                                            </div>
+                            
+                                            <!-- Navigation dots -->
+                                            <div style="text-align:center">
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                       </div>
+
+                                    <!-- <div class="testimonial-active">
+                                        <div class="testimonial-text pb-25">
+                                            <p class="font-italic secondary-color3">I love how intuitive and user-friendly the platform is! It makes navigating through investment options seamless</p>
+                                            <div class="testi-info d-flex mt-50">
+                                                <div class="testi-avatar mr-20 rounded-circle">
+                                                    <img class="rounded-circle" src="images/slider/testi1.jpg" width="70" height="70" alt="image">
+                                                </div>
+                                                <div class="avatar-info">
+                                                    <h6 class="f-700">Nayna Eva</h6>
+                                                    <p class="">Web Designer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-text pb-25">
+                                            <p class="font-italic secondary-color3">The platform offers a wide range of investment opportunities. This diversity allows me to tailor my portfolio to match my financial goals and risk tolerance.</p>
+                                            <div class="testi-info d-flex mt-50">
+                                                <div class="testi-avatar mr-20 rounded-circle">
+                                                    <img class="rounded-circle" src="images/testimonial/home1-testi-author-img.jpg" alt="image">
+                                                </div>
+                                                <div class="avatar-info">
+                                                    <h6 class="f-700">Nayna Eva</h6>
+                                                    <p class="">Web Designer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-text pb-25">
+                                            <p class="font-italic secondary-color3">The customer support team is incredibly responsive and helpful. Whether I have a question about a specific investment or need assistance with the platform, they are always there to provide timely and knowledgeable support.</p>
+                                            <div class="testi-info d-flex mt-50">
+                                                <div class="testi-avatar mr-20 rounded-circle">
+                                                    <img class="rounded-circle" src="images/testimonial/home1-testi-author-img.jpg" alt="image">
+                                                </div>
+                                                <div class="avatar-info">
+                                                    <h6 class="f-700">Nayna Eva</h6>
+                                                    <p class="">Web Designer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /testimonial-wrapper -->
+                </div><!-- /container -->
+            </div>
+            <!-- testimonial-area-end  -->
+
+            <!-- ====== banner-area-start ========================================= -->
+            <div class="banner-area banner-margin-bottom position-relative" data-aos="fade-up" data-aos-duration="1500">
+                <div class="container">
+                    <div class="banner-wrapper banner-border white-bg pl-70 pr-70 pt-55 pb-75 transition3">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-9 col-lg-9  col-md-12 col-sm-12 col-12">
+                                <div class="banner-content">
+                                    <h4 class="f-700 mb-18">New Users Get $50 Bonus Award </h4>
+                                    <p class="mb-0" style="font-size: 20px; font-weight: 700; "><span id="days">00</span> : <span id="hrs"></span> : <span id="min"></span> : <span id="sec"></span></p>
+                                </div><!-- /work-banner-content -->
+                            </div><!-- /col -->
+                            <div class="col-xl-3 col-lg-3  col-md-12 col-sm-12 col-12">
+                                <div class="banner-btn float-left float-lg-right">
+                                    <div class="my-btn">
+                                        <a href="account/signup.php" class="btn theme-bg text-capitalize f-18 f-700">Get Started</a>
+                                    </div><!-- /my-btn -->
+                                </div><!-- /work-banner-content -->
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /banner-wrapper -->
+                </div><!-- /container -->
+            </div>
+            <!-- banner-area-end  -->
+
+        </main>
+
+        <!-- ====== footer-area-start ============================================ -->
+        <footer> 
+            <div class="footer-area primary-bg pt-200">
+                <div class="footer-top pb-55">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3  col-lg-4  col-md-12  col-sm-12 col-12">
+                                <div class="footer-widget f-subscriber-area pb-30 mt-25">
+                                    <h6 class="text-capitalize f-700 mb-22">Subscribe Us</h6>
+                                    <div class="footer-subscribe">
+                                        <p>Get crypto analysis, news and updates right to your inbox! Sign up here so you don't miss a single newsletter.</p>
+                                        <form action="#">
+                                            <div class="subscribe-info mt-22 position-relative">
+                                                <input class="sub-name form-control border-0 pl-20 pt-15 pb-15 pr-10 white-bg secondary-color rounded-0" type="email" name="email" id="email" value="" placeholder="Submit email">
+                                                <span class="secondary-color d-inline-block position-absolute pointer" id="send"><i class="far fa-envelope"></i></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div><!-- /col -->
+                            <div class="col-xl-2 offset-xl-1  col-lg-2  col-md-3  col-sm-6 col-12">
+                                <div class="footer-widget f-info pb-30 ml-40 pr-20 mt-25">
+                                    <h6 class="text-capitalize f-700 mb-22">Useful Links</h6>
+                                    <ul class="footer-info">
+                                        <li>
+                                            <a href="index.html" class="position-relative d-inline-block mb-2">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="about-us.html" class="position-relative d-inline-block mb-2">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="Plans.html" class="position-relative d-inline-block mb-2">Plans</a>
+                                        </li>
+                                        <li>
+                                            <a href="account/signup.php" class="position-relative d-inline-block mb-2">Sign Up</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- /col -->
+                            <div class="col-xl-2  col-lg-2  col-md-3  col-sm-6 col-12">
+                                <div class="footer-widget f-info pb-30 ml-40 pr-20 mt-25">
+                                    <h6 class="text-capitalize f-700 mb-22">Help</h6>
+                                    <ul class="footer-info">
+                                        <li>
+                                            <a href="about-us.html" class="position-relative d-inline-block mb-2">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="about-us.html" class="position-relative d-inline-block mb-2">Service</a>
+                                        </li>
+                                        <li>
+                                            <a href="about-us.html" class="position-relative d-inline-block mb-2">Faq</a>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+                            </div><!-- /col -->
+                            <div class="col-xl-3  col-lg-4  col-md-6  col-sm-12 col-12 pr-xl-0">
+                                <div class="footer-widget f-adress pb-40 mt-25">
+                                    <h6 class="text-capitalize f-700 mb-22">Get in Touch</h6>
+                                    <ul class="footer-address">
+                                        <li class="d-flex align-items-start">
+                                            <span class="f-icon mr-20 mt-1"><i class="fas fa-map-marker-alt"></i></span> 
+                                            <div class="">
+                                               66 New Bridge St, London EC4V 6AB <br>United Kingdom <br>
+                                            </div>  
+                                        </li>
+                                        <li>
+                                            <span class="f-icon mr-20 mt-1"><i class="far fa-envelope"></i></span>
+                                            info@securedglobalasset.com
+                                        </li>
+                                    </ul>
+                                    <!-- <ul class="social-link mt-15">
+                                        <li class="d-inline-block">
+                                            <a class="facebook-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="twitter-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="youtube-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-youtube"></i></a>
+                                        </li>
+                                        <li class="d-inline-block">
+                                            <a class="instagram-color text-center d-inline-block transition-3" href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul> -->
+
+                                    <!-- social-link -->
+                                </div>
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="copyright-area mt-20 pb-50">
+                            <div class="row align-items-center">
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12 mb-10">
+                                    <div class="f-logo text-center text-md-left">
+                                        <img src="images/logo/asset-logo.png" style="width: 200px;" alt="image">
+                                    </div><!-- /f-logo -->
+                                </div><!-- /col -->
+                                <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12 mb-10">
+                                    <div class="phone-contact text-center text-md-right">
+                                        <a class="theme-color f-700" href="tell:+447984685502"><span class="pr-1"><span class="d-inline-block"><i class="fas fa-phone-alt"></i></span></span> +447984685502</a>
+                                    </div>
+                                </div><!-- /col -->
+                            </div><!-- /row -->
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-xl-6  col-lg-5  col-md-12  col-sm-12 col-12">
+                                    <div class="copyright-text text-center text-lg-left mt-20 mb-20">
+                                        <p class="mb-0 secondary-color2">All rights reserved 
+                                            <a href="https://securedglobalasset.com" class="c-theme f-700 black-color">Securedglobalasset.com</a>  ©  2024
+                                        </p>
+                                    </div>
+                                </div><!-- /col -->
+                                <div class="col-xl-6  col-lg-7  col-md-12  col-sm-12 col-12">
+                                    <ul class="useful-link text-center text-lg-right mt-20">
+                                        <li class="d-inline-block mb-20">
+                                            <a href="terms.html" class="secondary-color d-inline-block">Terms &amp; Condition</a>
+                                        </li>
+                                                                         
+                                    </ul><!-- social -->
+                                </div><!-- /col -->
+                            </div>
+                        </div><!-- /copyright-area -->
+                    </div><!-- /container -->
+                </div>
+            </div>
+        </footer>
+
+        <!-- back top -->
+        <div id="scroll" class="scroll-up position-relative z-index11">
+            <div class="top text-center"><span class="white-color theme-bg"><i class="fa fa-arrow-alt-up"></i></span></div>
+        </div>
+
+        <!-- All js here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/image-loaded.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/waypoint.js"></script>
+        <script src="js/counterup-min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/tilt.jquery.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/mainn.js"></script>
+        
+        <script>
+            var slideIndex = 0;
+           showSlides();
+       
+           function showSlides() {
+               var i;
+               var slides = document.getElementsByClassName("mySlides");
+               var dots = document.getElementsByClassName("dot");
+               for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+               }
+               slideIndex++;
+               if (slideIndex > slides.length) {
+                   slideIndex = 1;
+               }
+               for (i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace(" active", "");
+               }
+               slides[slideIndex - 1].style.display = "block";
+               dots[slideIndex - 1].className += " active";
+               setTimeout(showSlides, 4000); // Change slide every 2 seconds
+           }
+         </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+   
+    const timeoutDuration = 24 * 60 * 60 * 1000;
+    let startTime = parseInt(sessionStorage.getItem('countdownStartTime'), 10);
+    // console.log(username);
+    if (!startTime) {
+        startTime = new Date().getTime();
+        sessionStorage.setItem('countdownStartTime', startTime);
+    }
+
+    const timerId = setInterval(() => {
+        const remainingTime = timeoutDuration - (new Date().getTime() - startTime);
+        if (remainingTime <= 0) {
+              
+                clearInterval(timerId); // Stop the countdown when done
+                sessionStorage.removeItem('countdownStartTime'); // Remove stored startTime
+            }  
+            
+        let hours = Math.floor(remainingTime / (60 * 60 * 1000));
+        let minutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
+        let seconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
+        hours = String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
+        seconds = String(seconds).padStart(2, '0');
+
+        document.getElementById('hrs').textContent = `${hours}`;
+        document.getElementById('min').textContent = `${minutes}`;
+        document.getElementById('sec').textContent = `${seconds}`;
+    }, 1000);
+
+
+});
+
+document.getElementById("send").addEventListener("click", function() {
+    let email = document.getElementById("email").value;
+    if(email != ""){
+        alert('You have successfully subscribe to our newsletter');
+        window.location="index.html";
+    }else{
+        alert('Please provide your email address to subscribe to our newsletter');
+    }
+})
+
+document.getElementById("m-send").addEventListener("click", function() {
+    let email = document.getElementById("m-email").value;
+    if(email != ""){
+        alert('You have successfully subscribe to our newsletter');
+        window.location="index.html";
+    }else{
+        alert('Please provide your email address to subscribe to our newsletter');
+    }
+})
+
+
+
+</script>
+    </body>
+
+<!-- Mirrored from ethemestudio.com/demo/evalo/evalo-html-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 21:36:30 GMT -->
+</html>
